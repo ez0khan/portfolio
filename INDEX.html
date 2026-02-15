@@ -1,77 +1,431 @@
 <!DOCTYPE html>
 <html lang="uz">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Farruhjon | Portfolio</title>
-    <meta name="description" content="Professional shaxsiy portfolio sayti">
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Farruh | Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
+  <!-- background decor -->
+  <div class="bg-blobs" aria-hidden="true">
+    <span class="blob b1"></span>
+    <span class="blob b2"></span>
+    <span class="blob b3"></span>
+  </div>
 
-<!-- NAVBAR -->
-<nav class="navbar">
-    <div class="logo">Farruh</div>
-    <ul class="nav-links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#family">Family</a></li>
-        <li><a href="#friends">Group Friends</a></li>
-        <li><a href="#jobs">My Jobs</a></li>
+  <!-- NAV -->
+  <nav class="navbar" id="navbar">
+    <a class="logo" href="#home">Farruh<span class="dot">.</span></a>
+
+    <button class="nav-toggle" id="navToggle" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+
+    <ul class="nav-links" id="navLinks">
+      <li><a class="nav-a" href="#home">Home</a></li>
+      <li><a class="nav-a" href="#about">About</a></li>
+      <li><a class="nav-a" href="#skills">Skills</a></li>
+      <li><a class="nav-a" href="#projects">Projects</a></li>
+      <li><a class="nav-a" href="#family">Family</a></li>
+      <li><a class="nav-a" href="#friends">Friends</a></li>
+      <li><a class="nav-a" href="#jobs">Services</a></li>
+      <li><a class="nav-a" href="#contact">Contact</a></li>
     </ul>
-</nav>
-<!-- HERO -->
-<header class="hero">
-    <div class="hero-content glass">
-        <img src="./photo_2026-02-13_16-52-54.jpg"
-             alt="profile" class="profile-img">
-        <h1>Salom, Men <span>Farruh</span></h1>
-        <p>Men zamonaviy web developer va kreativ dizayner.</p>
-        <a href="#projects" class="btn">Loyihalarim</a>
-    </div>
-</header>
+  </nav>
 
-<main class="container">
+  <!-- HERO -->
+  <section id="home" class="section hero">
+    <div class="hero-wrap reveal">
+      <div class="hero-left">
+        <p class="kicker">Frontend Developer • UI Designer</p>
+        <h1 class="h1">
+          Salom, men <span class="grad">Farruh</span><br />
+          <span class="thin">Interaktiv va premium web sahifalar yarataman</span>
+        </h1>
 
-    <!-- ABOUT -->
-    <section id="about" class="glass">
-        <h2>About Me</h2>
-        <p>
-            Assalomu alaykum! Mening ismim Farruh Salohiddinov Jamshidovich.
-            Men 2014 yil 8-avgustda tug'lganman. Men frontend dasturini 3-oydan bera o'rganaman.
+        <p class="lead">
+          Men zamonaviy, responsiv va tez ishlaydigan web interfeyslar tayyorlayman.
+          Dizayn — minimal, lekin kuchli detail bilan.
         </p>
-    </section>
 
-    <!-- FAMILY -->
-    <section id="family" class="glass">
-        <h2>Family</h2>
-        <div class="grid">
-            <img src="./photo_2026-02-14_23-46-30.jpg" alt="">
-            <p>Men mehribon va ahil oilada ulg'ayganman. Oilam meni doimo qo'llab-quvvatlaydi.</p>
+        <div class="cta">
+          <a href="#projects" class="btn">Loyihalarim</a>
+          <a href="#contact" class="btn ghost">Bog‘lanish</a>
         </div>
-    </section>
 
-    <!-- FRIENDS -->
-    <section id="friends" class="glass">
-        <h2>Group Friends</h2>
-        <div class="grid">
-            <img src="./photo_2026-02-11_16-01-50.jpg" alt="">
-            <p>Do'stlarim bilan birga IT loyihalar va tadbirlarda qatnashaman.</p>
+        <div class="mini-stats">
+          <div class="stat">
+            <p class="stat-num">3+</p>
+            <p class="stat-txt">oy tajriba</p>
+          </div>
+          <div class="stat">
+            <p class="stat-num">10+</p>
+            <p class="stat-txt">mini loyiha</p>
+          </div>
+          <div class="stat">
+            <p class="stat-num">100%</p>
+            <p class="stat-txt">responsiv</p>
+          </div>
         </div>
-    </section>
+      </div>
 
-    <!-- JOBS -->
-    <section id="jobs" class="glass">
-        <h2>My Jobs</h2>
-        <div class="job-card">
-            <h3>Frontend Developer</h3>
-            <p>HTML, CSS, JavaScript asosida web saytlar yarataman.</p>
+      <div class="hero-right">
+        <div class="avatar-card">
+          <img src="./photo_2026-02-13_16-52-54.jpg" class="profile-img" alt="Farruh" />
+          <div class="avatar-glow"></div>
+
+          <div class="chips">
+            <span class="chip">HTML</span>
+            <span class="chip">CSS</span>
+            <span class="chip">JavaScript</span>
+            <span class="chip">UI</span>
+          </div>
         </div>
- 
-    </section>
+      </div>
+    </div>
 
-<footer class="glass">
-    © 2026 Farruh | All Rights Reserved
-</footer>
+    <a class="scroll-down" href="#about" aria-label="Scroll">
+      <span></span>
+    </a>
+  </section>
 
+  <!-- ABOUT -->
+  <section id="about" class="section">
+    <div class="container reveal">
+      <div class="section-head">
+        <h2 class="h2">About Me</h2>
+        <p class="muted">
+          Qisqa tanishtiruv + maqsadlar + qanday ishlashim.
+        </p>
+      </div>
+
+      <div class="two">
+        <div class="card">
+          <h3 class="h3">Men haqimda</h3>
+          <p class="muted">
+            Assalomu alaykum! Mening ismim Farruh Salohiddinov.
+            Men frontend dasturlashni 3 oydan beri o‘rganmoqdaman va
+            HTML, CSS, JavaScript orqali zamonaviy web sahifalar yarataman.
+          </p>
+          <p class="muted">
+            Maqsadim — kuchli Full Stack Developer bo‘lish va katta IT loyihalarda ishlash.
+          </p><div class="highlights">
+            <div class="hi"><span>⚡️</span><p><b>Tezkor</b><br/>toza layout</p></div>
+            <div class="hi"><span>🎨</span><p><b>Premium UI</b><br/>minimal detail</p></div>
+            <div class="hi"><span>📱</span><p><b>Responsiv</b><br/>mobile-first</p></div>
+          </div>
+        </div>
+
+        <div class="card soft">
+          <h3 class="h3">Timeline</h3>
+          <div class="timeline">
+            <div class="tl-item">
+              <span class="dot"></span>
+              <div>
+                <p class="tl-title">Boshlanish</p>
+                <p class="muted">Frontend asoslarini o‘rganishni boshladim.</p>
+              </div>
+            </div>
+            <div class="tl-item">
+              <span class="dot"></span>
+              <div>
+                <p class="tl-title">Mini loyihalar</p>
+                <p class="muted">Landing, portfolio, card UI, animatsiyalar.</p>
+              </div>
+            </div>
+            <div class="tl-item">
+              <span class="dot"></span>
+              <div>
+                <p class="tl-title">Keyingi qadam</p>
+                <p class="muted">React + API + real projectlar.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="quote">
+            “Oddiy dizayn emas — esda qoladigan tajriba qilaman.”
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills" class="section">
+    <div class="container reveal">
+      <div class="section-head">
+        <h2 class="h2">Skills</h2>
+        <p class="muted">Hozirgi ko‘nikmalarim va o‘sish yo‘nalishim.</p>
+      </div>
+
+      <div class="skills-grid">
+        <div class="card">
+          <h3 class="h3">Texnik ko‘nikmalar</h3>
+
+          <div class="bar">
+            <div class="bar-top"><span>HTML</span><span>85%</span></div>
+            <div class="bar-line"><i style="width:85%"></i></div>
+          </div>
+
+          <div class="bar">
+            <div class="bar-top"><span>CSS</span><span>80%</span></div>
+            <div class="bar-line"><i style="width:80%"></i></div>
+          </div>
+
+          <div class="bar">
+            <div class="bar-top"><span>JavaScript</span><span>60%</span></div>
+            <div class="bar-line"><i style="width:60%"></i></div>
+          </div>
+
+          <div class="tags">
+            <span class="tag">Responsive</span>
+            <span class="tag">Flex/Grid</span>
+            <span class="tag">Animations</span>
+            <span class="tag">UI Design</span>
+          </div>
+        </div>
+
+        <div class="card soft">
+          <h3 class="h3">Soft skills</h3>
+          <div class="soft-grid">
+            <div class="soft-item">✅ Jamoa bilan ishlash</div>
+            <div class="soft-item">✅ Mas’uliyat</div>
+            <div class="soft-item">✅ Kreativ fikrlash</div>
+            <div class="soft-item">✅ Tez o‘rganish</div>
+            <div class="soft-item">✅ Deadline</div>
+            <div class="soft-item">✅ Muloqot</div>
+          </div>
+
+          <div class="note">
+            Hozir fokus: <b>JavaScript</b> + <b>Real UI</b> + <b>Project</b>.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects" class="section">
+    <div class="container reveal">
+      <div class="section-head">
+        <h2 class="h2">Projects</h2>
+        <p class="muted">Quyidagilar demo ko‘rinish (rasm + tavsif). Keyin link qo‘shib chiqasan.</p>
+      </div>
+
+      <div class="projects-grid">
+        <article class="project">
+          <div class="project-top">
+            <div class="project-badge">UI</div>
+            <h3>Premium Portfolio</h3>
+            <p class="muted">Animatsiya + glass + responsiv layout.</p>
+          </div>
+          <div class="project-tags">
+            <span>HTML</span><span>CSS</span><span>Animation</span>
+          </div>
+          <a class="project-btn" href="#contact">Shu uslubda buyurtma</a>
+        </article><article class="project">
+          <div class="project-top">
+            <div class="project-badge violet">Landing</div>
+            <h3>Product Landing</h3>
+            <p class="muted">CTA, feature, pricing, FAQ section.</p>
+          </div>
+          <div class="project-tags">
+            <span>Layout</span><span>UX</span><span>CTA</span>
+          </div>
+          <a class="project-btn" href="#contact">Bog‘lanish</a>
+        </article>
+
+        <article class="project">
+          <div class="project-top">
+            <div class="project-badge green">JS</div>
+            <h3>Interactive Card UI</h3>
+            <p class="muted">Hover glow + scroll reveal + filter.</p>
+          </div>
+          <div class="project-tags">
+            <span>JS</span><span>UI</span><span>Effects</span>
+          </div>
+          <a class="project-btn" href="#contact">Demo tayyorlash</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAMILY -->
+  <section id="family" class="section">
+    <div class="container reveal">
+      <div class="section-head">
+        <h2 class="h2">Family</h2>
+        <p class="muted">Oilam — motivatsiyam va tayanchim.</p>
+      </div>
+
+      <div class="media-card">
+        <img width="100%" height="600px" src="./photo_2026-02-14_23-46-30.jpg" alt="Family" />
+        <div class="media-info">
+          <h3 class="h3">Ahil oila</h3>
+          <p class="muted">
+            Men mehribon va ahil oilada ulg‘ayganman. Oilam meni doimo qo‘llab-quvvatlaydi
+            va har bir muvaffaqiyatim ortida ular turadi.
+          </p>
+          <a class="btn small" href="#contact">Oilaviy sahifa qilish</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FRIENDS -->
+  <section id="friends" class="section">
+    <div class="container reveal">
+      <div class="section-head">
+        <h2 class="h2">Friends</h2>
+        <p class="muted">Jamoa bilan ishlash — kuchli tarafim.</p>
+      </div>
+
+      <div class="media-card reverse">
+        <img src="./photo_2026-02-11_16-01-50.jpg" alt="Friends" />
+        <div class="media-info">
+          <h3 class="h3">Group Friends</h3>
+          <p class="muted">
+            Do‘stlarim bilan IT loyihalar va hackathonlarda qatnashaman.
+            Jamoa bilan ishlash tajribam kuchli.
+          </p>
+          <div class="pills">
+            <span class="pill">Teamwork</span>
+            <span class="pill">Hackathon</span>
+            <span class="pill">Communication</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES (JOBS) -->
+  <section id="jobs" class="section">
+    <div class="container reveal">
+      <div class="section-head">
+        <h2 class="h2">Services</h2>
+        <p class="muted">Men nimalar qilaman — aniq va professional.</p>
+      </div>
+
+      <div class="services">
+        <div class="service">
+          <h3>Frontend Developer</h3>
+          <p class="muted">HTML, CSS, JS asosida premium web sahifa, landing va portfolio.</p>
+          <ul>
+            <li>Responsiv layout (Mobile/Tablet/Desktop)</li>
+            <li>Animatsiya + hover effectlar</li>
+            <li>Toza kod va tartibli struktura</li>
+          </ul>
+        </div>
+
+        <div class="service">
+          <h3>UI Designer</h3>
+          <p class="muted">Minimalistik va premium dizaynlar (glass + gradient + clean).</p>
+          <ul>
+            <li>Section kompozitsiya</li>
+            <li>Rang + tipografika</li>
+            <li>Modern komponentlar</li>
+          </ul>
+        </div>
+
+        <div class="service">
+          <h3>Website Upgrade</h3>
+          <p class="muted">Eski saytni zamonaviy ko‘rinishga olib chiqib beraman.</p>
+          <ul>
+            <li>UI/UX yaxshilash</li>
+            <li>Performance (tezlik)</li>
+            <li>SEO asosiy struktura</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section><!-- CONTACT -->
+  <section id="contact" class="section">
+    <div class="container reveal">
+      <div class="section-head">
+        <h2 class="h2">Contact</h2>
+        <p class="muted">Menga yozing — birga kuchli portfolio qilamiz.</p>
+      </div>
+
+      <div class="contact-grid">
+        <div class="card">
+          <h3 class="h3">Aloqa</h3>
+          <p class="muted">Quyidagilardan birini tanlang:</p>
+
+          <div class="contact-items">
+            <a class="contact-item" href="#">
+              <span>📩</span>
+              <div>
+                <b>Email</b>
+                <p class="muted">example@gmail.com</p>
+              </div>
+            </a>
+
+            <a class="contact-item" href="#">
+              <span>📱</span>
+              <div>
+                <b>Telegram</b>
+                <p class="muted">@username</p>
+              </div>
+            </a>
+
+            <a class="contact-item" href="#">
+              <span>🌐</span>
+              <div>
+                <b>Instagram</b>
+                <p class="muted">@farruh</p>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <div class="card soft">
+          <h3 class="h3">Quick Message</h3>
+          <form class="form" onsubmit="event.preventDefault(); alert('Xabar yuborildi (demo)');">
+            <input type="text" placeholder="Ismingiz" required>
+            <input type="email" placeholder="Email" required>
+            <textarea rows="5" placeholder="Xabaringiz..." required></textarea>
+            <button class="btn w100" type="submit">Yuborish</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>© 2026 Farruh | All Rights Reserved</p>
+  </footer>
+
+  <script>
+    // mobile nav
+    const navToggle = document.getElementById("navToggle");
+    const navLinks = document.getElementById("navLinks");
+    navToggle.addEventListener("click", () => {
+      navLinks.classList.toggle("open");
+      navToggle.classList.toggle("open");
+    });
+
+    // reveal on scroll
+    const revealItems = document.querySelectorAll(".reveal");
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach((e) => {
+        if (e.isIntersecting) {
+          e.target.classList.add("is-visible");
+          io.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.15 });
+    revealItems.forEach((el) => io.observe(el));
+
+    // navbar shadow on scroll
+    const navbar = document.getElementById("navbar");
+    window.addEventListener("scroll", () => {
+      navbar.classList.toggle("scrolled", window.scrollY > 10);
+    });
+  </script>
 </body>
 </html>
